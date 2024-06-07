@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 import automotivoThumb from 'assets/categorias/thumbnail/automotivo.png';
 import eletronicosThumb from 'assets/categorias/thumbnail/eletronicos.png';
 import escritorioThumb from 'assets/categorias/thumbnail/escritorio.png';
@@ -43,8 +43,8 @@ const initialState = [{
 }];
 
 const categoriasSlice = createSlice({
-    name: 'categorias',
-    initialState
-})
+  name: 'categorias',
+  initialState,
+});
 
-export default categoriasSlice.reducer
+export default categoriasSlice.reducer;
