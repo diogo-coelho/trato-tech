@@ -2,8 +2,7 @@ import styles from './TituloSemImagem.module.scss';
 
 export default function TituloSemImagem({
   titulo,
-  descricao,
-  children
+  descricao
 }) {
   return (
     <div className={styles.container}>
@@ -13,7 +12,6 @@ export default function TituloSemImagem({
       <h2 className={styles.descricao}>
         {descricao}
       </h2>
-      {children}
     </div>
   )
 }
