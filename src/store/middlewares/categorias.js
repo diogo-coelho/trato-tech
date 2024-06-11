@@ -1,6 +1,7 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit"
+import { buscarCategorias } from "store/reducers/categorias"
 
-const listener = createListenerMiddleware()
+export const listener = createListenerMiddleware()
 
 listener.startListening({
   actionCreator: buscarCategorias.pending,
