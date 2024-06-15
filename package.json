@@ -29,11 +29,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-	"prebuild": "npm run server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "npx json-server --watch db.json --port 3001"
+    "server": "json-server --watch db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [

@@ -8,8 +8,9 @@ import { itensListener } from './middlewares/itens';
 import createSagaMiddleware from 'redux-saga';
 import { categoriasSaga } from './sagas/categorias';
 import { carrinhoSaga } from './sagas/carrinho';
+import usuarioSlice from './reducers/usuario';
 
-const sagaMiddleare = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
@@ -17,18 +18,18 @@ const store = configureStore({
     itens: itensSlice,
     carrinho: carrinhoSlice,
     busca: buscaSlice,
+    usuario: usuarioSlice,
   },
-  middleware: 
-    getDefaultMiddleware => 
-      getDefaultMiddleware()
-      .prepend(
-		categoriasListener.middleware,
-		itensListener.middleware,
-		sagaMiddleare
-	)
+  middleware:
+    getDefaultMiddleware =>
+      getDefaultMiddleware().prepend(
+        categoriasListener.middleware,
+        itensListener.middleware,
+        sagaMiddleware
+      ),
 });
 
-sagaMiddleare.run(categoriasSaga)
-sagaMiddleare.run(carrinhoSaga)
+sagaMiddleware.run(categoriasSaga);
+sagaMiddleware.run(carrinhoSaga);
 
 export default store;

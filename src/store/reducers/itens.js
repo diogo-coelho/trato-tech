@@ -28,9 +28,9 @@ const itensSlice = createSlice({
       const index = state.findIndex(item => item.id === payload);
       state.splice(index, 1);
     },
-	adicionarItens: (state, { payload }) => {
-		state.push(...payload)
-	}
+    adicionarItens: (state, { payload }) => {
+      state.push(...payload);
+    }
   },
   extraReducers: builder => {
     builder

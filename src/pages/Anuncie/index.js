@@ -24,12 +24,12 @@ export default function Anuncie() {
   }
 
   useEffect(() => {
-	dispatch(
-		nomeCategoria 
-			? carregarUmaCategoria(nomeCategoria) 
-			: carregarCategorias
-	)
-  }, [dispatch, nomeCategoria])
+    dispatch(
+      nomeCategoria
+        ? carregarUmaCategoria(nomeCategoria)
+        : carregarCategorias
+    )
+  }, [dispatch, nomeCategoria]);
 
   return (
     <div className={styles.container}>

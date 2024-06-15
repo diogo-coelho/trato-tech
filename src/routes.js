@@ -16,7 +16,7 @@ export default function Router() {
           <Route path='carrinho' element={<Carrinho />} />
           <Route path='anuncie/:nomeCategoria' element={<Anuncie />} />
           <Route path='anuncie' element={<Anuncie />} />
-		  <Route path='pagamento' element={<Pagamento />} />
+          <Route path='pagamento' element={<Pagamento />} />
         </Route>
       </Routes>
     </BrowserRouter>
